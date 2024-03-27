@@ -1,0 +1,144 @@
+:root {
+    --clr-primary-cyan: hsl(179, 62%, 43%);
+    --clr-primary-yellow: hsl(71, 73%, 54%);
+
+    --clr-neutral-lightgray: hsl(204, 43%, 93%);
+    --clr-neutral-grayblue: hsl(218, 22%, 67%);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    font-family: "Karla", sans-serif;
+    background-color: var(--clr-neutral-lightgray);
+    font-size: 16px;
+    margin-inline: 2rem;
+
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+}
+.container {
+    max-width: 320px;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.178);
+}
+.card {
+    padding: 2.2rem;
+}
+.card > *:not(:last-child) {
+    margin-bottom: 1em;
+  }
+/* card 1 */
+.card-1 {
+    background-color: white;
+}
+.card-1 h1 {
+    color: var(--clr-primary-cyan);
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+}
+.card-1 h2 {
+    color: var(--clr-primary-yellow);
+    font-size: .9rem;
+    font-weight: var(--fw-bold);
+}
+.card-1 p {
+    color: var(--clr-neutral-grayblue);
+    font-size: .85rem;
+    line-height: 1.7;
+}
+/* card 2 */
+.card-2 {
+    background-color: var(--clr-primary-cyan);
+    color: var(--clr-neutral-lightgray);
+}
+h3 {
+    color: white;
+    font-size: 1.1rem;
+}
+.cost {
+    margin-bottom: 1.7rem;
+}
+.cost > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5em;
+}
+.card-2 h4 {
+    font-size: 1rem;
+    font-weight: var(--fw-normal);
+    color:  hsl(204, 43%, 93%, 60%);
+    margin-left: .7rem;
+}
+.card-2 span {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+}
+.card-2 .btn {
+    background-color: var(--clr-primary-yellow);
+    color: inherit;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    text-align: center;
+    padding: .9rem;
+    border-radius: .3rem;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.178);
+    margin-top: 1em;
+
+    display: inline-block;
+    width: 100%;
+}
+/* card 3 */
+.card-3 {
+    background-color: hsl(179, 47%, 52%);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: .9rem; 
+    font-weight: var(--fw-normal);
+    color: hsl(204, 43%, 93%, 90%);
+}
+@media (min-width: 700px) {
+    body {
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    .card-1 h1 {
+        font-size: 1.4rem;
+    }
+    .card-1 h2 {
+        font-size: 1.1rem;
+    }
+    .card-1 p {
+        font-size: .99rem;
+        padding-right: 1rem;
+    }
+    .flex {
+        display: flex;
+    }
+    .card-2 {
+        width: 100%;
+    }
+    .card-3 {
+        width: 100%;
+    }
+}
